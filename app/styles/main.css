@@ -1,0 +1,391 @@
+body {
+    background: #000000;
+    color: #c3a1db;
+    font-family: 'Source Sans Pro' sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.heading-text {
+    color: #ffffff;
+    font-weight: 200;
+    /*margin-bottom: 25px;*/
+}
+
+.stock-items {
+    font-size: 16pt;
+}
+
+.stock-item {
+    margin: 0;
+}
+
+.stock-item-bordered {
+    border-bottom: 1px solid #655e72;
+}
+
+.stock-quantity {
+    color: #ffffff;
+}
+
+.stock-measure {
+    color: #90819b;
+    font-weight: 700;
+    font-size: 10pt;
+    text-align: right;
+}
+
+.order {
+    display: inline-block;
+}
+
+.order-title {
+    background: #211d23;
+    color: #dbb9f9;
+    /*box-shadow: 0 3px 2px 2px #2d2d30;*/
+    font-size: 30px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.order-details {
+    background: #37373a;
+    height: 262px;
+}
+
+.order-ingredients-container {
+    height: 168px;
+    padding-top: 29px;
+}
+
+.order-ingredient-item {
+    color: #807d89;
+    font-size: 16px;
+    width: 24px;
+}
+
+.order-ingredient-quantity {
+    margin-left: 25px;
+    width: 45px;
+}
+
+.order-ingredient-measure {
+    font-weight: 700;
+}
+
+.order-ingredient-measure-blank {
+    margin-right: 13px;
+}
+
+.order-button {
+    cursor: pointer;
+}
+
+.order-button.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    box-shadow: none;
+}
+
+.order-button-plus {
+    width: 41px;
+}
+
+.order-button-minus {
+    width: 32px;
+}
+
+.drink-count {
+    background-color: #ecf0f1;
+    color: #37373a;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 71px;
+    height: 71px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 71px;
+}
+
+.order-place-order-button {
+    background: #9b59b6;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ordered-drink-count {
+    color: #ffffff;
+    text-align: right;
+}
+
+.ordered-drink-name {
+    color: #c3a1db;
+}
+
+.ordered-drink-equals {
+    color: #403f45;
+}
+
+.ordered-drink-total-row {
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+/* Responsive: Portrait iPhones and up */
+@media screen {
+    .heading-text {
+        font-size: 71px;
+        margin-top: 12px;
+    }
+
+    .stock-items {
+        font-size: 22px;
+    }
+
+    .stock-measure {
+        font-size: 10px;
+    }
+    .order {
+        margin: 25px 3px;
+        width: 284px;
+    }
+
+    .order-details {
+        width: 284px;
+    }
+
+    .order-ingredients-container {
+        height: 168px;
+        padding-top: 12px;
+    }
+
+    .order-ingredient-item {
+        font-size: 14px;
+        width: 24px;
+    }
+
+    .order-ingredient-quantity {
+        margin-left: 25px;
+        width: 45px;
+    }
+
+    .order-ingredient-measure {
+        font-size: 8px;
+    }
+
+    .order-ingredient-name {
+        margin-left: 27px;
+    }
+
+    .drink-count-container {
+        margin-bottom: 20px;
+    }
+
+    .order-button-plus {
+        margin-left: 35px;
+        margin-right: 31px;
+    }
+
+    .drink-count {
+        font-size: 29px;
+    }
+
+    .order-button-minus {
+        margin-left: 33px;
+        margin-right: 34px;
+    }
+
+    .order-title {
+        font-size: 31px;
+    }
+
+    .order-ingredient-item {
+        font-size: 26px;
+    }
+
+    .order-ingredient-measure {
+        font-size: 12px;
+    }
+
+    .order-ingredient-name {
+        margin-left: 27px;
+    }
+
+    .drink-count {
+        font-size: 45px;
+    }
+
+    .ordered-drink-count {
+        font-size: 24px;
+    }
+
+    .ordered-drink-name {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .order-place-order-button {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 321px) {
+    .heading-text {
+        font-size: 64px;
+    }
+
+    .stock-items {
+        font-size: 18px;
+    }
+
+    .stock-measure {
+        font-size: 12px;
+    }
+
+    .order {
+        margin: 25px 12px 0 12px;
+        width: 215px;
+    }
+
+    .order-title {
+        font-size: 30px;
+    }
+
+    .order-details {
+        width: 215px;
+    }
+
+    .order-ingredient-item {
+        font-size: 14px;
+    }
+
+    .order-ingredient-measure {
+        font-size: 8px;
+    }
+
+    .order-ingredient-name {
+        margin-left: 27px;
+    }
+
+    .order-button-plus {
+        width: 41px;
+    }
+
+    .order-button-minus {
+        width: 32px;
+    }
+
+    .drink-count-container {
+        margin-bottom: 20px;
+    }
+
+    .order-button-plus {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .order-button-minus {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .drink-count-container {
+        margin-bottom: 20px;
+        margin-left: 14px;
+        margin-right: 21px;
+    }
+
+    .drink-count {
+        font-size: 29px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .order-place-order-button {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    .ordered-drink-count {
+        font-size: 35px;
+        padding-left: 45px;
+    }
+
+    .ordered-drink-name {
+        font-size: 35px;
+        margin-left: 45px;
+    }
+}
+
+/* Responsive: Desktops and up */
+@media screen and (min-width: 769px) {
+    .heading-text {
+        font-size: 92px;
+    }
+
+    .stock-items {
+        font-size: 16pt;
+    }
+
+    .stock-measure {
+        font-size: 10pt;
+    }
+
+    .order {
+        margin: 25px 6px 0 6px;
+        width: 215px;
+    }
+
+    .order-title {
+        font-size: 30px;
+    }
+
+    .order-ingredient-item {
+        font-size: 14px;
+    }
+
+    .order-ingredient-measure {
+        font-size: 8px;
+    }
+
+    .order-ingredient-name {
+        margin-left: 27px;
+    }
+
+    .drink-count-container {
+        margin-bottom: 20px;
+        margin-left: 14px;
+        margin-right: 21px;
+    }
+
+    .drink-count {
+        font-size: 29px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .order-place-order-button {
+        font-size: 24px;
+        margin-top: 60px;
+    }
+
+    .ordered-drink-count {
+        font-size: 35px;
+        padding-left: 45px;
+        text-align: right;
+    }
+
+    .ordered-drink-name {
+        color: #c3a1db;
+        font-size: 35px;
+        margin-left: 45px;
+    }
+}

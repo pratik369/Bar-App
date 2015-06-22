@@ -1,0 +1,42 @@
+<div class="row heading-text">
+    <span class="col-md-12 col-sm-12 col-xs-12 text-center">Bar Stock</span>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12 stock-items" ng-repeat="filterItems in filteredItemGroups">
+        <div class="row stock-item" ng-repeat="stockItem in filterItems" ng-class="{'stock-item-bordered': !$last}">
+            <span class="col-md-8 col-sm-8 col-xs-8">{{stockItem.name}}</span>
+            <span class="col-md-4 col-sm-4 col-xs-4 pull-right">
+                <span class="stock-quantity stock-available-qty">{{getAvailableQty(stockItem)}}</span>
+                <span class="stock-measure"> {{stockItem.measure}}</span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="row heading-text">
+    <span class="col-md-12 col-sm-12 col-xs-12 text-center">Orders</span>
+</div>
+<div>
+    <div class="order" ng-repeat="drink in drinks">
+        <div class="order-title">{{drink.name}}</div>
+		<div class="order-details">
+            <div class="order-ingredients-container">
+                <div ng-repeat="ingredient in drink.ingredients">
+                    <span class="order-ingredient-item">
+                        <span class="order-ingredient-quantity">{{ingredient.qty}}<span class="order-ingredient-measure" ng-class="{'order-ingredient-measure-blank': !ingredient.measure}"> {{ingredient.measure}}</span></span>
+                        <span class="order-ingredient-name">{{getIngredientName(ingredient.stockId)}}</span>
+                    </span>
+                </div>
+            </div>
+            <div class="drink-count-container">
+                <a class="order-button" ng-class="{disabled: drink.unavailable}" ng-click="increaseDrinkCount($index, drink)"><img src="images/plus.png" class="order-button-plus"></a>
+                <span class="drink-count" ng-bind="drinksOrdered[$index].quantity || '-'"></span>
+                <a class="order-button" ng-class="{disabled: drinksOrdered[$index].quantity === 0}" ng-click="decreaseDrinkCount($index, drink)"><img src="images/minus.png" class="order-button-minus"></a>
+            </div>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <a class="col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn order-place-order-button" href="#/summary">Place Order</a>
+</div>
